@@ -146,7 +146,7 @@ namespace RegisteringUsers.Controllers
             {
                 ListOfMajors = temp
             };
-            return View(model);
+            return View(model); 
         }
 
         [AllowAnonymous]
