@@ -170,7 +170,7 @@ namespace RegisteringUsers.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-
+                    await UserManager.AddToRoleAsync(user.Id, "Admin");
                     Instructor myInst = new Instructor()
                     {
                         InstructorId = user.Id,
